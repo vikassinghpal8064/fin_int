@@ -1,0 +1,35 @@
+my_project/
+├── Cargo.toml
+├── src/
+│   ├── main.rs          # Entry point for your Rust backend
+│   ├── routes.rs        # (Optional) Organize request handlers
+│   ├── utils.rs         # (Optional) Helper functions
+│   └── ...              # Other Rust modules
+├── static/              # Public static assets
+│   ├── index.html
+│   ├── js/
+│   │   └── app.js
+│   ├── css/
+│   │   └── style.css
+│   └── images/
+│       └── logo.png
+└── templates/           # (Optional) HTML templates if you render dynamically
+    └── base.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

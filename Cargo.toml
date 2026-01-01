@@ -1,0 +1,32 @@
+[package]
+name = "fin_int"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+dotenvy = "0.15.7"
+openssl = "0.10.75"
+postgres = "0.19.12"
+postgres-openssl = "0.5.2"
+
+
+[[bin]]
+name ="main"
+path="src/main.rs"
+
+
+[[bin]]
+name = "create_table"
+path = "src/data_access/create_table.rs"
+
+[[bin]]
+name = "read_data"
+path = "src/data_access/read_data.rs"
+
+[[bin]]
+name = "update_data"
+path = "src/data_access/update_data.rs"
+
+[[bin]]
+name = "delete_data"
+path = "src/data_access/delete_data.rs"
