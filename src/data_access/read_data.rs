@@ -16,6 +16,7 @@ pub age:i32,
 pub email_id:String,
 pub phone_number:String,
 pub occupation:String,
+pub trust:String
 }
 pub fn find_all_users()->Result<Vec<Users>,String>{
     dotenv();
@@ -38,6 +39,7 @@ pub fn find_all_users()->Result<Vec<Users>,String>{
         let age: i32 = item.get("age");
         let phone_number: String = item.get("phone_number");
         let occupation: String = item.get("occupation");
+        let trust:String=item.get("trust");
 
         users_arr.push(Users {
             id,
@@ -46,6 +48,7 @@ pub fn find_all_users()->Result<Vec<Users>,String>{
             age,
             phone_number,
             occupation,
+            trust
         });
     }
 if users_arr.len()!=0{
