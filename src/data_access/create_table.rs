@@ -19,21 +19,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     client.batch_execute("DROP TABLE IF EXISTS users;")?;
     println!("Finished dropping table (if it existed).");
 
-    // client.batch_execute(
-    //     "CREATE TABLE users (
-    //         id SERIAL PRIMARY KEY,
-           
-    //         name VARCHAR(255) NOT NULL,
-    //         age INT,
-    //         phone_number VARCHAR(20),
-    //         email_id VARCHAR(255),
-    //         occupation VARCHAR(255),
-    //         photo BYTEA,
-    //         trust VARCHAR(10) NOT NULL CHECK (trust IN ('low','high','medium')),
-            
-    //     );"
-    // )?;
-    client.batch_execute(
+    // fn create_user_table(){
+ client.batch_execute(
     "CREATE TABLE users (
         id SERIAL PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
@@ -49,6 +36,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     client.batch_execute("ALTER SEQUENCE users_id_seq RESTART WITH 7097")?;
     println!("Finished creating table.");
+    
+   
 
     // Insert a single book record
    // Data to be inserted (Name, Age, Phone, Email, Occupation, Photo Bytes, Trust)
